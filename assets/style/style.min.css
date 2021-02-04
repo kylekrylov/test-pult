@@ -160,13 +160,14 @@ textarea {
    line-height: 30px;
 }
 .slick-arrow {
-   width: 20px;
+   width: 30px;
    position: absolute;
    top: 250px;
    color: transparent;
    background: 0 0;
    border: none;
    z-index: 100;
+   overflow: hidden;
 }
 .slick-arrow::before {
    content: url(../img/Vector.svg);
