@@ -1,0 +1,398 @@
+@charset "UTF-8";
+
+/* Указываем box sizing */
+
+*,
+*::before,
+*::after {
+  font-size: inherit;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+}
+
+a {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+/* Упрощаем работу с изображениями */
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+
+@font-face {
+  font-family: FuturaPT-Bold;
+  src: url("../fonts/FuturaPT-Bold.woff") format("woff"), url("../fonts/FuturaPT-Bold.woff2") format("woff2");
+  font-weight: "normal";
+  font-style: "normal";
+  font-display: "swap";
+}
+
+@font-face {
+  font-family: FuturaPT-Heavy;
+  src: url("../fonts/FuturaPT-Heavy.woff") format("woff"), url("../fonts/FuturaPT-Heavy.woff2") format("woff2");
+  font-weight: "normal";
+  font-style: "normal";
+  font-display: "swap";
+}
+
+@font-face {
+  font-family: FuturaPT-Light;
+  src: url("../fonts/FuturaPT-Light.woff") format("woff"), url("../fonts/FuturaPT-Light.woff2") format("woff2");
+  font-weight: "normal";
+  font-style: "normal";
+  font-display: "swap";
+}
+
+@font-face {
+  font-family: FuturaPT-Medium;
+  src: url("../fonts/FuturaPT-Medium.woff") format("woff"), url("../fonts/FuturaPT-Medium.woff2") format("woff2");
+  font-weight: "normal";
+  font-style: "normal";
+  font-display: "swap";
+}
+
+* {
+  font-family: FuturaPT-Medium, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  outline: none;
+}
+
+.body {
+  max-width: 1980px;
+  margin: 0 auto;
+  overflow-x: hidden;
+}
+
+.link {
+  cursor: pointer;
+}
+
+.portfolio {
+  padding: 0 80px;
+}
+
+.portfolio__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.portfolio__title {
+  font-family: FuturaPT-Bold, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  color: #a89365;
+  font-size: 48px;
+  line-height: initial;
+}
+
+.portfolio__link {
+  color: #a89365;
+  text-transform: uppercase;
+  font-size: 18px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.portfolio__link::after {
+  content: url(../img/Group.svg);
+  margin-left: 10px;
+}
+
+.portfolio__cards {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.portfolio-card {
+  width: 410px;
+  margin: 0 10px;
+}
+
+.portfolio-card__img {
+  max-height: 540px;
+  margin-bottom: 20px;
+}
+
+.portfolio-card__title {
+  color: #a89365;
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 100%;
+  margin-bottom: 20px;
+}
+
+.portfolio-card__text {
+  font-family: FuturaPT-Light, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-weight: 200;
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.slick-arrow {
+  position: absolute;
+  top: 250px;
+  color: transparent;
+  background: transparent;
+  border: none;
+  z-index: 100;
+}
+
+.slick-arrow::before {
+  content: url(../img/Vector.svg);
+}
+
+.slick-prev {
+  right: -28px;
+  -webkit-transform: translate(100%);
+      -ms-transform: translate(100%);
+          transform: translate(100%);
+}
+
+.slick-next {
+  left: -28px;
+  -webkit-transform: rotate(180deg) translate(100%);
+      -ms-transform: rotate(180deg) translate(100%);
+          transform: rotate(180deg) translate(100%);
+}
+
+.slick-dots {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.slick-dots li {
+  border-radius: 50%;
+  width: 12px;
+  height: 12px;
+  margin: 20px 10px;
+  background: #f2f2f2;
+}
+
+.slick-dots li.slick-active {
+  background: #a89365;
+}
+
+.slick-dots button {
+  display: none;
+}
+
+.portfolio__footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.portfoliod__button {
+  font-size: 18px;
+  line-height: 23px;
+  padding: 18px 62px;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: FuturaPT-Medium;
+  border: #a89365 solid 2px;
+}
+
+.portfoliod__button:first-child {
+  margin-right: 40px;
+}
+
+.portfoliod__button--white {
+  background: white;
+  color: #a89365;
+}
+
+.portfoliod__button--gold {
+  background: #a89365;
+  color: white;
+}
+
+@media (max-width: 1440px) {
+  .portfolio {
+    padding: 0 40px;
+  }
+
+  .portfolio__title {
+    font-size: 32px;
+  }
+
+  .portfolio__link {
+    margin-bottom: 10px;
+  }
+
+  .portfolio__cards {
+    margin-top: 20px;
+    margin-bottom: 0px;
+  }
+
+  .portfolio-card {
+    width: 270px;
+  }
+
+  .portfolio-card__title {
+    font-size: 24px;
+  }
+
+  .portfolio-card__text {
+    font-size: 16px;
+  }
+
+  .slick-arrow::before {
+    content: url(../img/Vector-min.svg);
+  }
+
+  .slick-prev {
+    right: -10px;
+  }
+
+  .slick-next {
+    left: -10px;
+  }
+
+  .portfoliod__button {
+    padding: 11px 32px;
+  }
+}
+
+@media (max-width: 767px) {
+  .portfolio {
+    padding: 0 20px;
+  }
+
+  .slick-arrow::before {
+    display: none;
+  }
+
+  .slick-dots {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
+  .portfolio__footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .portfoliod__button {
+    padding: 11px 0;
+  }
+
+  .portfoliod__button:first-child {
+    margin-right: 0px;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 520px) {
+  .portfolio__header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+
+  .portfolio__link {
+    margin-bottom: 0px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    -webkit-transition-duration: 0.01ms !important;
+         -o-transition-duration: 0.01ms !important;
+            transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
