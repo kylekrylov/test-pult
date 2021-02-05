@@ -183,7 +183,7 @@ select {
 
 .portfolio-card {
    width: 410px;
-   margin: 0 10px;
+   margin-right: 40px;
 }
 
 .portfolio-card__img {
