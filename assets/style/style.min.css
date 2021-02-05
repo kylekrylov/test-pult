@@ -291,10 +291,10 @@ textarea {
       -ms-flex-direction: column;
       flex-direction: column;
    }
-   .portfoliod__button {
+   .portfolio__button {
       padding: 11px 0;
    }
-   .portfoliod__button:first-child {
+   .portfolio__button:first-child {
       margin-right: 0;
       margin-bottom: 20px;
    }
