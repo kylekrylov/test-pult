@@ -163,8 +163,8 @@ textarea {
    line-height: 30px;
 }
 .slick-arrow {
-   width: 32px;
-   height: 24px;
+   width: 36px;
+   height: 36px;
    position: absolute;
    top: 250px;
    color: transparent;
@@ -263,6 +263,8 @@ textarea {
    }
    .slick-arrow {
       top: 170px;
+      width: 24px;
+      height: 24px;
    }
    .slick-arrow::before {
       content: url(../img/Vector-min.svg);
