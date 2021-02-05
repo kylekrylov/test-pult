@@ -214,7 +214,7 @@ textarea {
    -ms-flex-pack: center;
    justify-content: center;
 }
-.portfoliod__button {
+.portfolio__button {
    font-size: 18px;
    line-height: 23px;
    padding: 18px 62px;
@@ -223,14 +223,14 @@ textarea {
    font-family: FuturaPT-Medium;
    border: #a89365 solid 2px;
 }
-.portfoliod__button:first-child {
+.portfolio__button:first-child {
    margin-right: 40px;
 }
-.portfoliod__button--white {
+.portfolio__button--white {
    background: #fff;
    color: #a89365;
 }
-.portfoliod__button--gold {
+.portfolio__button--gold {
    background: #a89365;
    color: #fff;
 }
